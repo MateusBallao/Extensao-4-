@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Conhecimento Geral</title>
+    <link rel="stylesheet" href="css V9.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz de Conhecimento Geral</h1>
+        <div id="subject-selection">
+            <h2>Escolha uma matéria</h2>
+            <button onclick="startQuiz('matematica')">Matemática</button>
+            <button onclick="startQuiz('historia')">História</button>
+            <button onclick="startQuiz('ciencias')">Ciências</button>
+            <button onclick="startQuiz('geografia')">Geografia</button>
+            <button onclick="startQuiz('literatura')">Literatura</button>
+        </div>
+        
+        <div id="quiz-container" class="hidden">
+            <div id="progress-container">
+                <div id="progress-bar">
+                    <div id="progress"></div>
+                </div>
+                <p id="progress-text">Questão <span id="current-question">1</span> de <span id="total-questions"></span></p>
+            </div>
+            <div id="quiz-questions"></div>
+            <div id="navigation">
+                <button id="prev-button" onclick="prevQuestion()">Anterior</button>
+                <button id="next-button" onclick="nextQuestion()">Próximo</button>
+            </div>
+            <button id="submit-button" class="hidden">Enviar Respostas</button>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+    <script src="JS V9.js"></script>
+</body>
+</html>
